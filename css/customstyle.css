@@ -1,0 +1,112 @@
+body {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+
+.navbar-text > a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.navbar-brand {
+   background-color: transparent;
+}
+.navbar-header {
+   background-color: transparent;
+}
+
+.header-logo2 {
+    text-decoration: none;
+   color: white;
+   font-family: 'Cormorant Garamond', serif !important;
+   font-weight: bold;
+   font-size: 50px;
+   background-color: transparent;
+} 
+
+nav > .container {
+   background-color: black;
+}
+
+
+.navbar  {
+   margin-bottom: 0px;
+}
+
+.nav-border {
+   border-bottom: 2px solid #1a77ff;
+   width: 100%;
+}
+
+.navbar-collapse,
+.navbar
+ {
+border: none;
+}
+
+.navbar-default .navbar-brand {
+   color: white;
+   background-color: transparent;
+}
+
+.navbar-default .navbar-brand:hover ,
+.navbar-default .navbar-brand:focus {
+   color: #1a77ff;
+   background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a {
+   color: white;
+   font-weight: bold;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+   color: #1a77ff;
+   background-color: white;
+}
+
+#login-btn:hover {
+   background-color: white;
+   color: #1a77ff;
+}
+
+.navbar-default .navbar-nav > .active > a:hover {
+   color: white;
+}
+
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:focus {
+   color: white;
+   font-weight: bold;
+   background-color: #1a77ff;
+   background-image: none;
+}
+
+.navbar-default .navbar-nav > .active > a:hover {
+   color: #1a77ff;
+   background-color: white;
+} 
+
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus{
+
+}
+
+
+
+/*
+Navy Blue: #2C3E50;
+Navy Blue Active: #1A242F;
+Turquoise: #18BC9C;
+White: #FFFFFF;
+BTN Primary: #2C3E50
+BTN Primary Hover: #1E2A36;
+BTN Primary Hover Boarder: #161F29;
+BTN Success: #18BC9C;
+BTN Success Hover: #13987E;
+BTN Success Hover Boarder: #11866F;
+BTN Default: #95A5A6;
+BTN Default Hover: #7F9293;
+BTN Default Hover Background: #74898A;
+*/

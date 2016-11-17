@@ -1,0 +1,25 @@
+{
+   "Admins": [
+      {
+         "Email": "samuel@mail.com",
+         "FirstName": "Samuel",
+         "LastName": "Gustafsson",
+         "Password": "Hejsan123",
+         "UserType": "admin"
+      },
+      {
+         "Email": "jerry@mail.com",
+         "FirstName": "Jerry",
+         "LastName": "Johansson",
+         "Password": "Hejsan456",
+         "UserType": "admin"
+      },
+      {
+         "Email": "guest@mail.com",
+         "FirstName": "Barack",
+         "LastName": "Obama",
+         "Password": "guest",
+         "UserType": "admin"
+      }
+   ]
+}
