@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Bootstrap.min.css CDN -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+            crossorigin="anonymous">
+      <!-- Bootstrap-theme.min.css CDN -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
+            crossorigin="anonymous">
+      <script src="https://use.fontawesome.com/86d67e99e1.js"></script>
+      <!-- Style.css -->
+      <link rel="stylesheet" href="../css/jquery-confirm.min.css">
+      <link rel="stylesheet" href="../css/style.css">
+      <link rel="stylesheet" href="../css/customstyle.css">
+
+      <title>Document</title>
+</head>
+
+<body>
+      <header>
+            <section class="container">
+                  <nav class="navbar navbar-default" role="navigation">
+                        <div class="container">
+                              <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                          <span class="sr-only">Toggle navigation</span>
+                                          <span class="icon-bar"></span>
+                                          <span class="icon-bar"></span>
+                                          <span class="icon-bar"></span>
+                                    </button>
+
+                                    <a href="" class="navbar-brand header-logo2">Newton</a>
+                              </div>
+                              <div class="navbar-collapse collapse">
+                                    <ul class="nav navbar-nav navbar-right">
+                                          <li class="active"><a href="admin-overview.html">Home</a></li>
+                                          <li><a href="#" class="logout-btn" role="button">Logout</a></li>
+                                    </ul>
+                              </div>
+                              <!--/.nav-collapse -->
+                        </div>
+                  </nav>
+            </section>
+      </header>
+
+      <div class="nav-border"></div>
+
+      <section class="available-test-section">
+            <section class="table-responsive container">
+                  <table id="admin-overview-table" class="table table-striped table-hover">
+                        <tr>
+                              <th>Test Name</th>
+                              <th>Results</th>
+                              <th>Grade</th>
+                              <th>Start Test</th>
+                        </tr>
+                        <tr id="admin-overview-table-empty">
+                              <td>No tests available</td>
+                              <td>-</td>
+                              <td>-</td>
+                        </tr>
+                  </table>
+            </section>
+      </section>
+
+      <footer class="footer">
+            <div class="container">
+                  <div class="align-left col-lg-4 col-md-4">
+                        <h3>Contact</h3>
+                        <address>
+                              <p>Oxtorgsgatan 16</p>
+                              <p>335 75, Jönköping</p>
+                              <p>0736 87 09 92</p>
+                        </address>
+                        <a href="">
+                              <img src="https://s3.amazonaws.com/codecademy-content/projects/headlines/email.svg" alt="">
+                        </a>
+                        <a href="">
+                              <img src="https://s3.amazonaws.com/codecademy-content/projects/headlines/fb.svg" alt="">
+                        </a>
+                        <a href="">
+                              <img src="https://s3.amazonaws.com/codecademy-content/projects/headlines/twitter.svg" alt="">
+                        </a>
+                  </div>
+            </div>
+      </footer>
+
+      <div id="test-question-modal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                  <div class="modal-content">
+                        <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h4 class="modal-title"></h4>
+                        </div>
+                        <div class="modal-body"></div>
+                        <div class="modal-footer">
+                              <section id="timer-wrapper" class="pull-left text-left">
+                                    <div><strong>Time left:</strong></div>
+                                    <div id="timer"></div>
+                              </section>
+                              <button type="button" class="modal-close-test-btn btn hidden btn-default" data-dismiss="modal">Close</button>
+                              <button type="button" class="modal-next-question-btn btn disabled btn-primary">Next question</button>
+                        </div>
+                  </div>
+                  <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+      <section id="test-result-section" class="table-responsive modal">
+            <table id="test-result-table" class="table table-striped table-hover">
+                  <tr>
+                        <th>Test name</th>
+                        <th>Results</th>
+                        <th>Grade</th>
+                  </tr>
+                  <tr id="modal-test-result-table-row-emty">
+                        <td>Something went wrong</td>
+                        <td>-</td>
+                  </tr>
+            </table>
+      </section>
+
+      <!-- Jquery CDN -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      <!-- Bootstrap.min.js CDN -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+      <!-- script.js -->
+      <script src="../js/jquery-confirm.min.js"></script>
+      <script src="../js/jquery.plugin.min.js"></script>
+      <script src="../js/jquery.countdown.js"></script>
+      <script src="../js/helpers.js"></script>
+      <script src="../js/script.js"></script>
+      <script type="text/javascript">
+            $(document).ready(function () {
+                  renderAllTests(); // Render all tests.
+            });
+      </script>
+
+
+</body>
+
+</html>

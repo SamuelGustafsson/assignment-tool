@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Bootstrap.min.css CDN -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+            crossorigin="anonymous">
+      <!-- Bootstrap-theme.min.css CDN -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
+            crossorigin="anonymous">
+      <!-- JQuery-confirm.min.css CDN -->
+      <link rel="stylesheet" href="../css/jquery-confirm.min.css">
+      <!-- fontawesome.min.css CDN -->
+      <script src="https://use.fontawesome.com/86d67e99e1.js"></script>
+      
+      <!-- Style.css -->
+      <link rel="stylesheet" href="../css/style.css">
+      <link rel="stylesheet" href="../css/customstyle.css">
+
+      <title>Document</title>
+</head>
+
+<body>
+      <header>
+            <section class="container">
+                  <nav class="navbar navbar-default" role="navigation">
+                        <div class="container">
+                              <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                          <span class="sr-only">Toggle navigation</span>
+                                          <span class="icon-bar"></span>
+                                          <span class="icon-bar"></span>
+                                          <span class="icon-bar"></span>
+                                    </button>
+
+                                    <a href="admin-overview.html" class="navbar-brand header-logo2">Newton</a>
+                              </div>
+                              <div class="navbar-collapse collapse">
+                                    <ul class="nav navbar-nav navbar-right">
+                                          <li><a href="admin-overview.html">Home</a></li>
+                                          <li><a href="#" class="modal-show-all-students-btn">Students</a></li>
+                                          <li><a href="#" class="logout-btn" role="button">Logout</a></li>
+                                    </ul>
+                              </div>
+                              <!--/.nav-collapse -->
+                        </div>
+                  </nav>
+            </section>
+      </header>
+
+      <div class="nav-border"></div>
+
+      <!-- Create test form -->
+      <section id="create-test-section">
+            <div class="container">
+                  <div class=" col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 ">
+                        <form id="create-test-form" class="form-horizontal" role="form">
+                              <fieldset>
+
+                                    <legend>
+                                          <h2>Create Test</h2>
+                                    </legend>
+                                    <!-- Input Testname -->
+                                    <div class="form-group">
+                                          <label class="control-label col-md-4 col-sm-4" for="form-test-name">Test name</label>
+                                          <div class="col-md-8 col-sm-8">
+                                                <input type="text" id="form-test-name" class="form-control input-md" placeholder="Enter name of test" required>
+                                          </div>
+                                    </div>
+
+                                    <!-- Radios Selfcorrecting -->
+                                    <div class="form-group">
+                                          <label class="control-label col-md-4 col-sm-4" for="form-self-correcting">Self correcting</label>
+                                          <div class="col-md-8 col-sm-8">
+                                                <label class="radio-inline">
+                                    <input type="radio" name="form-self-correcting" value="true" checked="checked"> Yes
+                              </label>
+                                                <label class="radio-inline">
+                                    <input type="radio" name="form-self-correcting" value="false"> No
+                              </label>
+                                          </div>
+                                    </div>
+
+                                    <!-- Dropbox Timelimit -->
+                                    <div class="form-group">
+                                          <label class="control-label col-md-4 col-sm-4" for="form-timer">Timelimit</label>
+                                          <div class="col-md-8 col-sm-8">
+                                                <select id="form-timer" class="form-control" required>
+                                          <option value="10">10 min</option>
+                                          <option value="15">15 min</option>
+                                          <option value="30">30 min</option>
+                                          <option value="45">45 min</option>
+                                          <option value="60">60 min</option>
+                                          <option value="0.10">10 sekunder</option>
+
+                              </select>
+                                          </div>
+                                    </div>
+                              </fieldset>
+                              <hr>
+
+                              <!-- Input question -->
+                              <div id="questions">
+                                    <div class="form-group question">
+                                          <label class="control-label col-md-4 col-sm-4" for="form-question">Question</label>
+                                          <div class="col-md-8 col-sm-8">
+                                                <div class="input-group">
+                                                      <input type="text" class="form-control form-question" placeholder="Enter question" required>
+                                                      <span class="input-group-btn">
+                                                <button class="btn btn-success btn-add-question" type="button" title="Add new question to test">
+                                                      <span class="glyphicon glyphicon-plus" title="Add new question to test"></span>
+                                                      </button>
+                                                      </span>
+                                                </div>
+
+                                                <div class="question-alternative">
+                                                      <label class="control-label col-md-5 col-sm-5" for="form-question-attributes">Alternative</label>
+
+                                                      <div class="input-group col-md-7 col-sm-7">
+                                                            <input type="text" class="form-control form-question-alternative" required>
+                                                            <span class="input-group-btn">
+                                                <select class="btn form-question-alternative-state" required>
+                                                      <option value="false">False</option>
+                                                      <option value="true">Correct</option>
+                                                </select>
+                                                </span>
+                                                            <span class="input-group-btn">
+                                                      <button class="btn btn-success btn-add-alternative" type="button" title="Add new alternative to test">
+                                                      <span class="glyphicon glyphicon-plus" title="Add new alternative to test"></span>
+                                                            </span>
+                                                      </div>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                              <button id="create-test-btn" type="submit" class="btn btn-default pull-right" title="Create test your test for students">Create test</button>
+                        </form>
+                  </div>
+            </div>
+      </section>
+
+      <footer class="footer">
+            <div class="container">
+                  <div class="align-left col-lg-4 col-md-4 col-sm-4">
+                        <h3>Contact</h3>
+                        <address>
+                              <p>Oxtorgsgatan 16</p>
+                              <p>335 75, Jönköping</p>
+                              <p>0736 87 09 92</p>
+                        </address>
+                        <a href="">
+                              <img src="https://s3.amazonaws.com/codecademy-content/projects/headlines/email.svg" alt="">
+                        </a>
+                        <a href="">
+                              <img src="https://s3.amazonaws.com/codecademy-content/projects/headlines/fb.svg" alt="">
+                        </a>
+                        <a href="">
+                              <img src="https://s3.amazonaws.com/codecademy-content/projects/headlines/twitter.svg" alt="">
+                        </a>
+                  </div>
+            </div>
+      </footer>
+
+      <div class="modal fade all-students-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                  <div class="modal-content">
+                        <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h4 class="modal-title">All Registered Students</h4>
+                        </div>
+                        <div class="modal-body">
+                              <section class="table-responsive">
+                                    <table id="modal-all-students-table" class="table table-striped table-hover">
+                                          <tr>
+                                                <th>Students</th>
+                                                <th>Email</th>
+                                                <th>Edit</th>
+                                          </tr>
+                                          <tr id="modal-all-students-table-emty">
+                                                <td>No students found</td>
+                                                <td>-</td>
+                                          </tr>
+                                    </table>
+                              </section>
+                        </div>
+                        <div class="modal-footer">
+                              <button type="button" class="modal-close-test-btn btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                  </div>
+                  <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+
+      <!-- Jquery CDN -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      <!-- Bootstrap.min.js CDN -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+      <script src="../js/jquery-confirm.min.js"></script>
+      <!-- script.js -->
+      <script src="../js/helpers.js"></script>
+      <script src="../js/script.js"></script>
+</body>
+
+</html>
